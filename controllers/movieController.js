@@ -1,3 +1,8 @@
+//import Movie Model
+
+import {Movie} from '../models/movieModel.js'
+
+
 //description: gets all movies
 //route: GET api/v1/movies
 //access PUBLIC
@@ -18,8 +23,9 @@ const getMovie = (req, res, next) => {
 //route: POST api/v1/movies
 //access PUBLIC
 
-const createMovie = (req, res, next) => {
-  res.status(201).json({ success: true, msg: "Show all movies" });
+const createMovie =async (req, res, next) => {
+  const movie = await Movie.create(req.body)
+  res.status(201).json({ success: true, data:movie });
 };
 
 //description: update movie

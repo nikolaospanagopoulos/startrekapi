@@ -1,6 +1,10 @@
 import express from "express";
 import dotenv from "dotenv";
 
+//import colors package
+import colors from 'colors'
+
+
 // TODO: LOAD ENV VARIABLES
 dotenv.config({ path: "./config/config.env" });
 
@@ -18,6 +22,10 @@ connectDB();
 
 const app = express();
 
+//add body parser middleware
+app.use(express.json())
+
+
 //development middleware logging
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
@@ -31,14 +39,14 @@ const PORT = process.env.PORT || 5000;
 const server = app.listen(
   PORT,
   console.log(
-    `server running in port ${PORT} in ${process.env.NODE_ENV} environment`
+    `server running in port ${PORT} in ${process.env.NODE_ENV} environment`.yellow.bold
   )
 );
 
 //handle unhandled promise rejections
 
 process.on("unhandledRejection", (err, promise) => {
-  console.log(`unhandled rejection : ${err.message}`);
+  console.log(`unhandled rejection : ${err.message}`.red);
   //close server exit process
   server.close(() => process.exit(1));
 });

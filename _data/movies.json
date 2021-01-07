@@ -1,0 +1,27 @@
+[
+	{
+		"_id": "5d713995b721c3bb38c1f5d0",
+		"user": "5d7a514b5d2c12c7449be045",
+		"title": "Star Trek the motion picture",
+		"description": "When an alien spacecraft of enormous power is spotted approaching Earth, Admiral James T. Kirk resumes command of the overhauled USS Enterprise in order to intercept it.",
+		"wikipedia_link": "https://en.wikipedia.org/wiki/Star_Trek:_The_Motion_Picture",
+		"box_office": "$139 million",
+		"budget": "$44 million",
+		"release_date": "December 7, 1979",
+		"actors": [
+			"William Shatner",
+			"Leonard Nimoy",
+			"DeForest Kelley",
+			"James Doohan",
+			"George Takei",
+			"Majel Barrett",
+			"Walter Koenig",
+			"Nichelle Nichols",
+			"Persis Khambatta",
+			"Stephen Collins"
+		],
+		"director": "Robert Wise",
+		"story_by": "Alan Dean Foster"
+	}
+]
+
