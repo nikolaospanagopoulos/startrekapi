@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 //import colors package
 import colors from 'colors'
 
+//import error middleware
+import {errorHandler} from './middleware/error.js'
 
 // TODO: LOAD ENV VARIABLES
 dotenv.config({ path: "./config/config.env" });
@@ -33,6 +35,11 @@ if (process.env.NODE_ENV === "development") {
 
 //mount routes
 app.use("/api/v1/movies", movieRoutes);
+
+
+//use error handler
+app.use(errorHandler)
+
 
 const PORT = process.env.PORT || 5000;
 
